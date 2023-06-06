@@ -1,0 +1,63 @@
+Internal to external transfer
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	int temp,i;
+	int source1[] = {10,20,30,40,50};
+	int dest1[] = {123,234,345,456,567};
+	printf("\n\t Before Transfer : ");
+	printf("\n\t Source=>");
+	for(i=0;i<=4;i++)
+	{printf("%d,",source1[i]);
+	}
+	printf("\n\t Dsetination=> ");
+	for(i=0;i<=4;i++)
+	{printf("%d,",dest1[i]);
+	}
+	for(i=0;i<=4;i++)
+	{
+		temp=source1[i];
+		source1[i]=dest1[i];
+		dest1[i]=temp;
+	}
+	printf("\n\n\t After Transfer : ");
+	printf("\n\t Source = ");
+	for(i=0;i<=4;i++)
+	{printf("%d,",source1[i]);
+	}
+	printf("\n\n\t Destination = ");
+	for(i=0;i<=4;i++)
+	{
+		printf("%d,",dest1[i]);
+	}
+}
+
+Internal to Internal transfer:
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+int temp,i;
+	int source1[]={11,22,33,44,55};
+	int dest[]={1,2,3,4,5};
+	printf("\n\t SOURCE =>");
+	for(i=0;i<=4;i++)
+	{
+		printf("%d,",dest[i]);
+	}
+	printf("\n\t BEFORE TRANSFER ");
+	printf("\n\t DESTINATION =>");
+	for(i=0;i<=4;i++)
+	{printf("%d,",dest[i]);
+	}
+	for(i=0;i<=4;i++)
+	{dest[i]=source1[i];
+	}
+	printf("\n\t AFTER TRANSFER ");
+	printf("\n\t DESTINATION =>");
+	for(i=0;i<=4;i++)
+	{
+printf("%d,",dest[i]);
+	}
+}
